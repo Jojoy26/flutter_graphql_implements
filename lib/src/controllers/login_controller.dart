@@ -1,4 +1,5 @@
 import 'package:dio/dio.dart';
+import 'package:flutter_dotenv/flutter_dotenv.dart';
 import 'package:get/get.dart';
 import 'package:graphql/client.dart';
 import 'package:oauth2_client/access_token_response.dart';
@@ -40,8 +41,8 @@ class LoginController extends GetxController with SnackBar {
         );
 
         AccessTokenResponse response = await auth.getTokenWithAuthCodeFlow(
-          clientId: "953288776828997642",
-          clientSecret: "t0jM4TXo2kMNPW63MDqfV3wAWU8bWkW7",
+          clientId: dotenv.env['CLIENT_ID'] as String,
+          clientSecret: dotenv.env['CLIENT_SECRET'] as String,
           scopes: ["identify"]
         );
         userToken = response.accessToken as String;
