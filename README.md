@@ -2,6 +2,9 @@
 
 ## Aplicativo que criei na intenção de testar o graphql
 
+## Visual do figma
+https://www.figma.com/community/file/991338130828322960
+
 # Recursos
 ### Autenticação com discord
 ### Criação de partida
